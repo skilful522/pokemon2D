@@ -1,0 +1,122 @@
+* {
+  font-family: "Blaka", cursive;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: 0;
+}
+
+button:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.overlapping {
+  position: absolute;
+  background-color: black;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.actionsBar {
+  position: absolute;
+  background-color: white;
+  display: flex;
+  height: 140px;
+  border-top: 4px solid black;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.attacks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 66.66%;
+}
+
+.attackType {
+  display: flex;
+  width: 33.33%;
+  border-left: 4px solid black;
+  align-items: center;
+  justify-content: center;
+}
+
+.bar-wrapper {
+  position: absolute;
+  background-color: white;
+  border: 4px solid black;
+  width: 250px;
+}
+
+.player {
+  bottom: 160px;
+  right: 20px;
+}
+
+.enemy {
+  top: 20px;
+  left: 20px;
+}
+
+.character-info {
+  padding: 10px;
+}
+
+.bars {
+  position: relative;
+}
+
+.healthbar {
+  margin-top: 10px;
+  height: 5px;
+  background-color: #ccc;
+}
+
+.green-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-top: 0;
+  background-color: green;
+}
+
+.attack-info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: white;
+  padding: 12px;
+  display: none;
+  cursor: pointer;
+}
+
+.battle-interface {
+  display: none;
+}
