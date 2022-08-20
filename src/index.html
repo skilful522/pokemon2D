@@ -8,16 +8,26 @@
       href="https://fonts.googleapis.com/css2?family=Blaka&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Title</title>
+    <title>Pokemon 2d</title>
   </head>
   <body>
     <div class="wrapper">
+      <div class="game-menu">
+        <div class="loading">Loading...</div>
+        <div>
+          <button class="play">
+            <span class="letter">P</span>
+            <span class="letter">l</span>
+            <span class="letter">a</span>
+            <span class="letter">y</span>
+          </button>
+        </div>
+      </div>
       <div class="overlapping"></div>
       <canvas></canvas>
       <div class="battle-interface">
         <div class="actionsBar">
-          <div class="attack-info">Hello</div>
+          <div class="attack-info"></div>
           <div class="attacks"></div>
           <div class="attackType">
             <h1>Attack type</h1>
@@ -44,5 +54,4 @@
       </div>
     </div>
   </body>
-  <script src="index.js" type="module"></script>
 </html>

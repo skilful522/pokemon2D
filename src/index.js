@@ -16,7 +16,11 @@ import { rectangularCollision } from "./helpers/rectangularCollision";
 import "./styles.css";
 import { animateBattle, initBattle } from "./animateBattle";
 import { audioManager } from "./audio";
+import { getState } from "./gameState";
 
+const gameMenuContainer = document.querySelector(".game-menu");
+const loadingContainer = document.querySelector(".loading");
+const playButton = document.querySelector(".play");
 const collisions = getLayer("Collisions");
 const battleZones = getLayer("Battle Zones");
 
@@ -265,8 +269,17 @@ export const animate = () => {
 };
 
 window.onload = () => {
-  animate();
+  loadingContainer.style.display = "none";
+  playButton.style.display = "block";
 };
+
+document.querySelector(".play").addEventListener("click", () => {
+  getState.isPlaying = true;
+  gameMenuContainer.style.display = "none";
+  canvas.style.display = "block";
+  audioManager.play("map");
+  animate();
+});
 
 window.addEventListener("keydown", (event) => {
   switch (event.key) {
@@ -303,13 +316,5 @@ window.addEventListener("keyup", (event) => {
       break;
     default:
       break;
-  }
-});
-
-let clicked = false;
-addEventListener("click", () => {
-  if (!clicked) {
-    audioManager.play("map");
-    clicked = true;
   }
 });

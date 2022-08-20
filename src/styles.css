@@ -1,5 +1,7 @@
 * {
   font-family: "Blaka", cursive;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -21,6 +23,11 @@ button {
 button:hover {
   background-color: #ccc;
   cursor: pointer;
+}
+
+canvas {
+  height: 100vh;
+  display: none;
 }
 
 .wrapper {
@@ -119,4 +126,31 @@ button:hover {
 
 .battle-interface {
   display: none;
+}
+
+.game-menu {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.play {
+  display: none;
+}
+
+.play,
+.loading {
+  font-size: 100px;
+  background: none;
+  color: green;
+}
+
+.play:hover {
+  background: none;
+}
+
+.letter:hover {
+  color: lawngreen;
 }
