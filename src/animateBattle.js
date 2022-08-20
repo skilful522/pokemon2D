@@ -38,12 +38,28 @@ export const initBattle = () => {
   renderedSprites = [dragon, emby];
   queue = [];
 
+  document.querySelector(".enemy-character-name").innerHTML = dragon.name;
+  document.querySelector(".player-character-name").innerHTML = emby.name;
+
   emby.attacks.map((attack) => {
     const button = document.createElement("button");
     button.innerHTML = attack.name;
     button.dataset.attack = attack.name;
     attacksContainer.append(button);
   });
+
+  Array.from(attacksContainer.children).forEach((child) => {
+    child.addEventListener("mouseenter", (event) => {
+      if (event.target.dataset.attack) {
+        const { type, color } = attacks[event.target.dataset.attack];
+
+        attackType.innerHTML = type;
+        attackType.style.color = color;
+      }
+    });
+    attackType.innerHTML = "Attack type";
+  });
+
 };
 
 let battleAnimationId;
@@ -114,18 +130,6 @@ attacksContainer.addEventListener("click", (event) => {
       return;
     }
   }
-});
-
-Array.from(attacksContainer.children).forEach((child) => {
-  child.addEventListener("mouseenter", (event) => {
-    if (event.target.dataset.attack) {
-      const { type, color } = attacks[event.target.dataset.attack];
-
-      attackType.innerHTML = type;
-      attackType.style.color = color;
-    }
-  });
-  attackType.innerHTML = "Attack type";
 });
 
 document.querySelector(".attack-info").addEventListener("click", (event) => {

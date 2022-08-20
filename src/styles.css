@@ -17,6 +17,7 @@ h1 {
 }
 
 button {
+  font-size: inherit;
   border: 0;
 }
 
@@ -67,6 +68,7 @@ canvas {
 .attackType {
   display: flex;
   width: 33.33%;
+  font-size: 64px;
   border-left: 4px solid black;
   align-items: center;
   justify-content: center;
@@ -118,6 +120,7 @@ canvas {
   bottom: 0;
   right: 0;
   left: 0;
+  font-size: 64px;
   background: white;
   padding: 12px;
   display: none;
@@ -153,4 +156,13 @@ canvas {
 
 .letter:hover {
   color: lawngreen;
+}
+
+.attacks {
+  font-size: 64px;
+}
+
+.player-character-name,
+.enemy-character-name {
+  font-size: 32px;
 }

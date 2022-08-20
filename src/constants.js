@@ -10,7 +10,7 @@ export const attacks = {
   },
   fireball: {
     name: "fireball",
-    damage: 50,
+    damage: 25,
     type: "Fire",
     color: "red",
     audioHit: audioManager.getAudio("initFireball"),
