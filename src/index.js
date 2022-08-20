@@ -264,7 +264,9 @@ export const animate = () => {
   }
 };
 
-animate();
+window.onload = () => {
+  animate();
+};
 
 window.addEventListener("keydown", (event) => {
   switch (event.key) {
