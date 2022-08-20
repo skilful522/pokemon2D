@@ -4,7 +4,7 @@ import fireballHit from "./assets/audio/fireballHit.wav";
 import initBattle from "./assets/audio/initBattle.wav";
 import tackleHit from "./assets/audio/tackleHit.wav";
 import initFireball from "./assets/audio/initFireball.wav";
-import map from "./assets/audio/map.wav";
+import map from "./assets/audio/map.mp3";
 import victory from "./assets/audio/victory.wav";
 
 import AudioManager from "./helpers/AudioManager";
