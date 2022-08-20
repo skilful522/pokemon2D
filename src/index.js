@@ -81,6 +81,16 @@ mapImage.src = gameMapSrc;
 const foregroundImage = new Image();
 foregroundImage.src = foregroundSrc;
 
+const initPlayerImages = () => {
+  [playerUpSrc, playerRightSrc, playerLeftSrc].forEach((src) => {
+    const image = new Image();
+    image.src = src;
+  });
+};
+
+// TODO investigate me, workaround for uploading images
+initPlayerImages();
+
 const playerImage = new Image();
 playerImage.src = playerDownSrc;
 
